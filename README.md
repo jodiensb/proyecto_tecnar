@@ -22,9 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# egresado
-# egresado
-# proyecto1
-# proyecto
-# egresado
 # proyecto_tecnar
