@@ -1,0 +1,62 @@
+<h1 class="text-center">EDITAR ESTUDIANTE</h1>
+
+<div class="modal-content text-center">
+
+  <%= simple_form_for @estudiante do |f|%>
+
+  <div class="formulario">
+    <div id="color_letra" class="col-lg-6 col-md-3 col-sm-3">
+    </br>
+      <div  class="form-group">
+          <%= f.input :codigo, placeholder:"Codigo Estudiante"%>
+      </div>
+
+  <div class="form-group">
+      <%= f.input :ingreso label_method: :nombre%>
+  </div>
+
+  <div class="form-group">
+      <%= f.input :egreso%>
+  </div>
+
+  <div  class="form-group">
+      <%= f.input :nombre, placeholder:"Digite Nombre "%>
+  </div>
+
+  <div  class="form-group">
+      <%= f.input :apellidos, placeholder:"Digite Apellidos"%>
+  </div>
+
+  <div  class="form-group">
+      <%= f.association :facultad, label_method: :nombre%>
+  </div>
+
+  <div  class="form-group">
+      <%= f.association :programa, label_method: :nombre%>
+  </div>
+
+  <div  class="form-group">
+      <%= f.input :telefono, placeholder: "Digite Telefono"%>
+  </div>
+
+  <div  class="form-group">
+      <%= f.input :correo, placeholder: "Digite correo"%>
+  </div>
+
+  <div  class="form-group">
+      <%= f.input :direccion, placeholder: "Digite Direccion"%>
+  </div>
+
+
+        <div class="actions">
+          <%= f.submit 'Guardar', class: "btn btn-success active",
+          method: :edit, data: {confirm:'Actualizar Estudiante'}%>
+          <%= link_to 'Regresar', estudiantes_path,
+          class: "btn btn-ttc active"%>
+        </div>
+
+      </br>
+</div>
+</div>
+<%end%>
+</div>

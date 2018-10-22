@@ -1,0 +1,31 @@
+<h1 class="text-center">EDITAR FACULTAD</h1>
+
+<div class="modal-content text-center">
+  <%= simple_form_for @facultad do |f|%>
+
+  <div class="formulario">
+    <div id="color_letra" class="col-lg-6 col-md-3 col-sm-3">
+    </br>
+      <div  class="form-group">
+          <%= f.input :codigo, placeholder:"Codigo Facultad"%>
+      </div>
+
+  <div class="form-group">
+    <%= f.input :nombre, placeholder:"Nombre Facultad"%>
+  </div>
+
+  <div class="form-group">
+<%= f.input :decano, placeholder:"Nombre Decano"%>
+  </div>
+
+        <div class="actions">
+          <%= f.submit 'Guardar', class: "btn btn-success active",
+          method: :edit, data: {confirm:'Actualizar Facultad'}%>
+          <%= link_to 'Regresar', facultades_path,
+          class: "btn btn-ttc active"%>
+        </div>
+      </br>
+</div>
+</div>
+<%end%>
+</div>

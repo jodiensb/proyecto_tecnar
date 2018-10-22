@@ -1,0 +1,43 @@
+<h1 class="text-center">LISTADO DE FACULTADES REGISTRADAS</h1>
+
+</br>
+<div class="modal-content text-center">
+<div class="table-responsive">
+<table class="table">
+
+<thead>
+  <div class="row">
+    <tr class="success">
+        <th class="text-center" colspan="2">Editar Id</th>
+        <th class="text-center">Codigo</th>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Decano</th>
+        <th class="text-center">Programa</th>
+    </tr>
+  </div>
+</thead>
+
+<% @facultades.each do |facultad|%>
+
+<tbody>
+  <div class="row">
+    <tr class="text-center">
+    <td colspan="2" class="warning">
+    <%= link_to facultad.id, facultad_path(facultad), class:"btn btn-warning active"%></td>
+    <td><%= facultad.codigo%></td>
+    <td><%= facultad.nombre%></td>
+    <td><%= facultad.decano%></td>
+    <td><%= facultad.programa_id%></td>
+    </tr>
+  </div>
+</tbody>
+
+    <%end%>
+
+  </table>
+</div>
+
+</br>
+</br>
+</br>
+</div>

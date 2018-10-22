@@ -1,0 +1,43 @@
+<h1 class="text-center">MODIFICAR PROGRAMA</h1>
+</br>
+<div class="modal-content text-center">
+<div class="table-responsive">
+  <table class="table">
+
+    <thead>
+      <div class="row">
+        <tr class="warning">
+          <th class="text-center" colspan="2">Id</th>
+          <th class="text-center">Codigo</th>
+          <th class="text-center">Nombre</th>
+          <th class="text-center">Encargado</th>
+          <th class="text-center">Facultad</th>
+        </tr>
+      </div>
+    </thead>
+
+    <tbody>
+      <div class="row">
+      <tr class="text-center">
+        <td colspan="2" class="info"><%= @programa.id%></td>
+        <td><%= @programa.codigo%></td>
+        <td><%= @programa.nombre%></td>
+        <td><%= @programa.encargado%></td>
+        <td><%= @programa.facultad_id%></td>
+        </tr>
+      </div>
+    </tbody>
+
+  </table>
+</div>
+
+</br>
+<div class="actions">
+<%= link_to "Editar", edit_programa_path(@programa[:id]), class: "btn btn-ttc active"%>
+<%= link_to "Nuevo Registro", new_programa_path, class: "btn btn-ttc active"%>
+<%= link_to "Regresar", programas_path, class: "btn btn-ttc active" %>
+<%= link_to "Eliminar", programa_path(@programa), method: :delete,
+data: { confirm: 'Desea Eliminar?' }, class: "btn btn-danger active"%>
+</div>
+</br>
+</div>

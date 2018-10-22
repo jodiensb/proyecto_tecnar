@@ -1,0 +1,45 @@
+<h1 class="text-center">MODIFICAR FACULTAD</h1>
+</br>
+<div class="modal-content text-center">
+<div class="table-responsive">
+  <table class="table">
+
+    <thead>
+      <div class="row">
+        <tr class="warning">
+          <th class="text-center" colspan="2">Id</th>
+          <th class="text-center">Codigo</th>
+          <th class="text-center">Nombre</th>
+          <th class="text-center">Decano</th>
+          <th class="text-center">Programa</th>
+        </tr>
+      </div>
+    </thead>
+
+    <tbody>
+      <div class="row">
+      <tr class="text-center">
+        <td colspan="2" class="info"><%= @facultad.id%></td>
+        <td><%= @facultad.codigo%></td>
+        <td><%= @facultad.nombre%></td>
+        <td><%= @facultad.decano%></td>
+        <td><%= @facultad.programa_id%></td>
+        </tr>
+      </div>
+    </tbody>
+
+  </table>
+</div>
+
+</br>
+<div class="actions">
+  <center>
+<%= link_to "Editar", edit_facultad_path(@facultad[:id]), class: "btn btn-ttc active"%>
+<%= link_to "Nuevo Registro", new_facultad_path, class: "btn btn-ttc active"%>
+<%= link_to "Regresar", facultades_path, class: "btn btn-ttc active" %>
+<%= link_to "Eliminar", facultad_path(@facultad), method: :delete,
+data: { confirm: 'Desea Eliminar?' }, class: "btn btn-danger active"%>
+</center>
+</div>
+</br>
+</div>

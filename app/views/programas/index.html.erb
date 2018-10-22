@@ -1,0 +1,43 @@
+<h1 class="text-center">LISTADO DE PROGRAMAS REGISTRADOS</h1>
+
+</br>
+<div class="modal-content text-center">
+<div class="table-responsive">
+<table class="table">
+
+<thead>
+  <div class="row">
+    <tr class="success">
+      <th class="text-center" colspan="2">Editar Id</th>
+      <th class="text-center">Codigo</th>
+      <th class="text-center">Nombre</th>
+      <th class="text-center">Encargado</th>
+      <th class="text-center">Facultad</th>
+    </tr>
+  </div>
+</thead>
+
+<% @programas.each do |programa|%>
+
+<tbody>
+  <div class="row">
+    <tr class="text-center">
+    <td colspan="2" class="warning">
+    <%= link_to  programa.id, programa_path(programa), class:"btn btn-warning active"%></td>
+    <td><%= programa.codigo%></td>
+    <td><%= programa.nombre%></td>
+    <td><%= programa.encargado%></td>
+    <td><%= programa.facultad.nombre%></td>
+    </tr>
+  </div>
+</tbody>
+
+    <%end%>
+
+  </table>
+</div>
+
+</br>
+</br>
+</br>
+</div>

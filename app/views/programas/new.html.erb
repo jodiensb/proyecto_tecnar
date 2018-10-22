@@ -1,0 +1,39 @@
+<h1 class="text-center">REGISTRO DE PROGRAMAS</h1>
+
+<div class="modal-content text-center">
+
+<%= simple_form_for @programa do |f|%>
+
+<div class="formulario">
+  <div id="new" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  </br>
+<div class="form-group">
+<%= f.input :codigo,
+  placeholder:"Codigo Programa"%>
+</div>
+
+<div class="form-group">
+  <%= f.input :nombre,
+   placeholder:"Nombre Programa"%>
+</div>
+
+<div class="form-group">
+  <%= f.input :encargado,
+  placeholder:"Nombre Encargado"%>
+</div>
+
+<div class="form-group">
+  <%= f.association :facultad, label_method: :nombre%>
+</div>
+
+<div class="actions">
+  <%= f.submit 'Guardar', method: :new,
+  data: { confirm: 'Desea Registrar Programa' },
+   class:"btn btn-success active"%>
+</div>
+
+</div>
+</div>
+
+<%end%>
+</div>

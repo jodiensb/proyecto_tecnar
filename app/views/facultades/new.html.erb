@@ -1,0 +1,36 @@
+<h1 class="text-center">REGISTRO DE FACULTAD</h1>
+
+<div class="modal-content text-center">
+<%= simple_form_for @facultad do |f|%>
+
+
+<div class="formulario">
+  <div id="new" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  </br>
+<div class="form-group">
+<%= f.input :codigo,
+  placeholder:"Codigo Facultad"%>
+</div>
+
+<div class="form-group">
+  <%= f.input :nombre, placeholder: "Nombre Facultad"%>
+</div>
+
+<div class="form-group">
+  <%= f.input :decano,
+  placeholder:"Nombre Decano"%>
+</div>
+
+<div class="actions">
+  <center>
+  <%= f.submit 'Guardar', method: :new,
+  data: { confirm: 'Desea Guardar Facultad' },
+   class:"btn btn-success active"%>
+</center>
+</div>
+
+</div>
+</div>
+
+<%end%>
+</div>

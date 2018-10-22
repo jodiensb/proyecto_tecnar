@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  ingreso: 2018-10-18
+  egreso: 2018-10-18
+  nombre: MyString
+  apellidos: MyString
+  facultad: one
+  programa: one
+  telefono: 1
+  correo: MyString
+  direccion: MyString
+
+two:
+  codigo: MyString
+  ingreso: 2018-10-18
+  egreso: 2018-10-18
+  nombre: MyString
+  apellidos: MyString
+  facultad: two
+  programa: two
+  telefono: 1
+  correo: MyString
+  direccion: MyString
